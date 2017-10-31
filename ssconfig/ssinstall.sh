@@ -16,3 +16,5 @@ firewall-cmd --zone=public --add-port=18042/udp --permanent
 systemctl enable shadowsocks
 systemctl start shadowsocks
 systemctl status shadowsocks -l
+cd ..
+rm -rf shadow
