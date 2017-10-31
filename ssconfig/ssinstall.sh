@@ -4,7 +4,7 @@ easy_install pip
 pip install shadowsocks
 mkdir /etc/shadowsocks
 curl "https://raw.githubusercontent.com/eshxcmhk/YeildSSH/master/ssconfig/shadowsocks.json" -o "shadowsocks.json"
-cp shadowsocks.json /etc/
+cp shadowsocks.json /etc/shadowsocks/
 curl "https://raw.githubusercontent.com/eshxcmhk/YeildSSH/master/ssconfig/ss.service" -o "shadowsocks.service"
 cp shadowsocks.service /etc/systemd/system/
 service firewalld start
