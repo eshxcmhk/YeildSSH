@@ -1,4 +1,5 @@
 mkdir shadow
+cd shadow
 yum install python-setuptools -y
 easy_install pip
 pip install shadowsocks
@@ -25,4 +26,4 @@ systemctl enable shadowsocks
 systemctl start shadowsocks
 systemctl status shadowsocks -l
 cd ..
-rm -rf shadow
+rm -rf ./shadow
