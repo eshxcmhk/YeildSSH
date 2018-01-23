@@ -4,5 +4,5 @@
 	"local_port":1080,
 	"password":"eshxcmhk",
 	"timeout":60,
-	"method":"aes-256-gcm"
+	"method":"chacha20-ietf-poly1305"
 }
