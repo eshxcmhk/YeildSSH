@@ -21,3 +21,6 @@ ldconfig
 echo 'compile shadowsocks-libev'
 ./autogen.sh && ./configure --prefix=/usr && make
 sudo make install
+cd ..
+rm -rf ./shadow
+echo 'install completed'
