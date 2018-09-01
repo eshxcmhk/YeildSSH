@@ -9,7 +9,8 @@ cd shadowsocks-libev
 git submodule update --init --recursive
 
 echo 'install libsodium'
-export LIBSODIUM_VER=1.0.16
+# export LIBSODIUM_VER=1.0.16
+export LIBSODIUM_VER=stable-2018-09-01
 wget https://download.libsodium.org/libsodium/releases/libsodium-$LIBSODIUM_VER.tar.gz
 tar xvf libsodium-$LIBSODIUM_VER.tar.gz
 pushd libsodium-$LIBSODIUM_VER
@@ -19,7 +20,8 @@ popd
 sudo ldconfig
 
 echo 'Installation of MbedTLS'
-export MBEDTLS_VER=2.9.0
+# export MBEDTLS_VER=2.9.0
+export MBEDTLS_VER=2.12.0
 wget https://tls.mbed.org/download/mbedtls-$MBEDTLS_VER-gpl.tgz
 tar xvf mbedtls-$MBEDTLS_VER-gpl.tgz
 pushd mbedtls-$MBEDTLS_VER
