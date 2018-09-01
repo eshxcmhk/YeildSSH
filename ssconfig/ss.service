@@ -4,6 +4,7 @@ After=network.target
 
 [Service]
 TimeoutStartSec=0
+ExecStartPre=/usr/bin/ss-server -c /etc/shadowsocks-libev/ss_conf_9042.json -u
 ExecStart=/usr/bin/ss-server -c /etc/shadowsocks-libev/shadowsocks.json -u
 Restart=on-abort
 
