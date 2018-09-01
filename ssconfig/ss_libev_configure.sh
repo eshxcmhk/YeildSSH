@@ -5,6 +5,8 @@ curl -s https://raw.githubusercontent.com/eshxcmhk/YeildSSH/master/ssconfig/ss_l
 mkdir -p /etc/shadowsocks-libev
 curl "https://raw.githubusercontent.com/eshxcmhk/YeildSSH/master/ssconfig/shadowsocks.json" -o "shadowsocks.json"
 cp shadowsocks.json /etc/shadowsocks-libev/
+curl "https://raw.githubusercontent.com/eshxcmhk/YeildSSH/master/ssconfig/ss_conf_9042.json" -o "ss_conf_9042.json"
+cp ss_conf_9042.json /etc/shadowsocks-libev/
 curl "https://raw.githubusercontent.com/eshxcmhk/YeildSSH/master/ssconfig/ss.service" -o "shadowsocks.service"
 cp shadowsocks.service /etc/systemd/system/
 service firewalld start
