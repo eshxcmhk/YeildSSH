@@ -7,5 +7,8 @@ curl https://raw.githubusercontent.com/eshxcmhk/YeildSSH/master/ocserv/ca-cert.p
 curl https://raw.githubusercontent.com/eshxcmhk/YeildSSH/master/ocserv/server-cert.pem -o /etc/ssl/certs/server-cert.pem --progress
 curl https://raw.githubusercontent.com/eshxcmhk/YeildSSH/master/ocserv/server-key.pem -o /etc/ssl/private/server-key.pem --progress
 
+yum -y install epel-release
+yum -y install ocserv
+
 cd ..
 rm -rf ocserv
