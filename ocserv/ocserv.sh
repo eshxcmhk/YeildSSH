@@ -29,5 +29,11 @@ firewall-cmd --permanent --direct --passthrough ipv4 -t nat POSTROUTING -o eth0 
 
 firewall-cmd --reload
 
+echo 'install ocserv.service'
+curl "https://raw.githubusercontent.com/eshxcmhk/YeildSSH/master/ocserv/ocserv.service" -o /etc/systemd/system/ocserv.service
+systemctl enable ocserv
+systemctl start ocserv
+systemctl status ocserv -l
+
 cd ..
 rm -rf ocserv
