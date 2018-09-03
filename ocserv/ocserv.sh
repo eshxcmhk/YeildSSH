@@ -29,6 +29,10 @@ firewall-cmd --permanent --direct --passthrough ipv4 -t nat POSTROUTING -o eth0 
 
 firewall-cmd --reload
 
+echo 'check nat result'
+firewall-cmd --query-masquerade
+echo "if check result is no,please modify the /etc/sysctl.conf manually to set net.ipv4.ip_forward = 1,then run 'sysctl -p' to flush"
+
 echo 'install ocserv.service'
 curl "https://raw.githubusercontent.com/eshxcmhk/YeildSSH/master/ocserv/ocserv.service" -o /etc/systemd/system/ocserv.service
 systemctl enable ocserv
