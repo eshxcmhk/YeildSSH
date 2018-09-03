@@ -9,6 +9,9 @@ curl https://raw.githubusercontent.com/eshxcmhk/YeildSSH/master/ocserv/ca/server
 yum -y install epel-release
 yum -y install ocserv
 
+mv -n /etc/ocserv/ocserv.conf /etc/ocserv/ocserv.conf.back
+curl https://raw.githubusercontent.com/eshxcmhk/YeildSSH/master/ocserv/ocserv.conf -o /etc/ocserv/ocserv.conf  --progress
+
 service firewalld start
 echo "open port 8142/tcp"
 firewall-cmd --zone=public --add-port=8142/tcp --permanent
