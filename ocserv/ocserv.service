@@ -5,7 +5,10 @@ After=network.target
 [Service]
 TimeoutStartSec=0
 ExecStart=/usr/sbin/ocserv -c /etc/ocserv/ocserv.conf
-Restart=on-abort
+ExecReload=/usr/bin/killall /user/sbin/ocserv
+ExecStop=/usr/bin/killall /usr/sbin/ocserv
+PrivateTmp=true
+RemainAfterExit=yes
 
 [Install]
 WantedBy=multi-user.target
