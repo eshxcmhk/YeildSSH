@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 TimeoutStartSec=0
-ExecStart=/usr/bin/ss-server -c /etc/shadowsocks-libev/shadowsocks.json -u
+ExecStart=/usr/sbin/ocserv -c /etc/ocserv/ocserv.conf
 Restart=on-abort
 
 [Install]
