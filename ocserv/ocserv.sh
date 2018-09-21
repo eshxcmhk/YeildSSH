@@ -22,7 +22,7 @@ firewall-cmd --zone=public --add-port=8142/tcp --permanent
 echo "open port 8142/udp"
 firewall-cmd --zone=public --add-port=8142/udp --permanent
 
-echi 'open firewall nat'
+echo 'open firewall nat'
 firewall-cmd --permanent --zone=public --change-interface=eth0
 firewall-cmd --zone=public --add-masquerade --permanent
 firewall-cmd --permanent --direct --passthrough ipv4 -t nat POSTROUTING -o eth0 -j MASQUERADE -s 192.168.80.0/24
